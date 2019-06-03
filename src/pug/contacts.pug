@@ -5,43 +5,33 @@ html(lang="ru")
 		title Контакты
 		include inc/head.pug
 		include inc/css.pug
-	body
+	body.inner
 		#main
-			nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
-				.container
-					a.logo(href="http://wattson-electric.ru/")
-						img(src="./img/logo.png" alt="")
-					#navbarsExampleDefault.collapse.navbar-collapse.my-2.my-md-0.mr-md-3
-						include inc/nav.pug
-							
-			.container
-				.row
-					.col-xs-12.col-md-4
-						.col-xs-12.contact-block
-							h2 Контакты
-							hr.main-hr
-							p Телефон: +7 (495) 671-39-54
-							hr
-							p Email: info@wattson-electric.ru
-							hr
-							p Адрес: Россия, МО, Одинцовский район, Сколково, Новая улица, 100
-							hr
-						.col-xs-12.contact-form
-							form(action="http://wattson-electric.ru/form-send/" method="post")
-								input(type="hidden" name="csrfmiddlewaretoken" value="dmtERAZuk0EbF6tgbBTwds1bPyiVKAJzJ6KeGySeDAu9y5oRjQxk1j66azn8lNFF")
-								.form-group
-									input#id_name.form-control(type="text" name="name" placeholder="Имя" required="")
-								.form-group
-									input#id_email.form-control(type="email" name="email" placeholder="Email" required="")
-								.form-group
-									input#id_message.form-control(type="text" name="message" placeholder="Текст сообщения" required="")
-								button.btn.text-center(type="submit") Отправить
-					.col-xs-12.col-md-8
-						iframe(src="./img/CBF4F4F2XD.html" width="100%" height="100%" frameborder="1" allowfullscreen="true")
-		footer.footer(style="padding: 10px 0px;background: #467716!important;color:#fff;")
-			.container
-				.row
-					.col-md-7
-						img(src="./img/asdasd.png" style="max-width:120px;")
-					.col-md-5.text-right
-						span.text-muted.text-right ООО "WATTSON" | ОГРН: 887643574839 | © 2018 
+			include inc/header.pug
+			.page-wr
+				.contacts
+					.container
+						.row
+							.col-xs-12.col-md-4
+								.col-xs-12.contact-block
+									h2 Контакты
+									hr.main-hr
+									p Телефон: +7 (495) 671-39-54
+									hr
+									p Email: info@wattson-electric.ru
+									hr
+									p Адрес: Россия, МО, Одинцовский район, Сколково, Новая улица, 100
+									hr
+								.col-xs-12.contact-form
+									form(action="http://wattson-electric.ru/form-send/" method="post")
+										input(type="hidden" name="csrfmiddlewaretoken" value="dmtERAZuk0EbF6tgbBTwds1bPyiVKAJzJ6KeGySeDAu9y5oRjQxk1j66azn8lNFF")
+										.form-group
+											input#id_name.form-control(type="text" name="name" placeholder="Имя" required="")
+										.form-group
+											input#id_email.form-control(type="email" name="email" placeholder="Email" required="")
+										.form-group
+											input#id_message.form-control(type="text" name="message" placeholder="Текст сообщения" required="")
+										button.btn.text-center(type="submit") Отправить
+							.col-xs-12.col-md-8.contacts-map
+								iframe(src="https://yandex.ru/map-widget/v1/-/CBF4F4F2XD" width="100%" height="100%" frameborder="1" allowfullscreen="true")
+		include inc/footer.pug

@@ -21,6 +21,19 @@ li
 	padding: 0
 	margin: 0
 
+.mobile-menu
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	width: 250px
+	background: #fff
+
+	.nav-link
+		padding: 15px
+		font-size: rem(18)
+		font-weight: bold
+		border-bottom: 1px solid #eee
 .stage
 	&-title
 		text-align: center	
@@ -99,7 +112,7 @@ li
 
 .services
 	// background: #f2f2f2
-	margin: 50px 0 80px
+	// margin: 50px 0 80px
 
 	&-title
 		text-align: center
@@ -110,7 +123,7 @@ li
 		display: flex
 		flex-wrap: wrap
 		justify-content: center
-		margin: 0 0 -40px -40px
+		margin: 0 0 40px -40px
 
 	&__item
 		display: flex
@@ -242,6 +255,530 @@ h2.text-center
 	&-cont
 		background: #62b40e
 		padding-bottom: 100px
+
+.second-screen
+	display: flex
+	flex-wrap: nowrap
+
+	&-cont
+		background: #f2f1f1
+
+	&-img
+		margin-top: -140px
+		position: relative
+
+		img
+			max-width: 100%
+
+.first-screen
+	overflow-x: hidden
+	overflow-y: auto
+
+.main-banner
+	position: relative
+
+
+	.container
+		display: flex
+		align-items: center
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+
+	&__info, &__img
+		width: 50%
+
+	&__img
+		text-align: center
+
+	&__info
+		h1
+			font-size: rem(30)
+			font-weight: bold
+			text-transform: uppercase
+
+		p 
+			font-size: rem(20)
+
+
+		> div
+			max-width: 450px
+
+.head__burger
+	display: none
+
+.burger
+	z-index: 100
+	display: flex !important
+	justify-content: flex-end
+	align-items: center
+	box-sizing: content-box
+	size: 40px 30px
+	padding: 15px
+	background: 0 0
+	border: 0
+	user-select: none
+	margin: -15px
+	&:before 
+		display: none
+
+
+	span
+		position: relative
+		display: inline-block
+		width: 40px
+		height: 2px
+		vertical-align: bottom
+		background: #fff
+		transition: background .2s .4s
+
+		&:before
+			border-radius: 0
+			transform: none
+			content: ""
+			position: absolute
+			right: 0
+			top: 8px
+			width: 30px
+			height: 2px
+			background: #fff
+			transform-origin: 50% 50%
+			transition: top .3s .3s ease, transform .3s ease, width .3s ease
+		&:after
+			content: ""
+			position: absolute
+			right: 0
+			top: -8px
+			width: 25px
+			height: 2px
+			background: #fff
+			transform-origin: 50% 50%
+			transition: top .3s .3s ease, transform .3s ease, width .3s ease
+
+
+
+.js__menu--open
+
+	.burger 
+		> span
+			background: 0 0
+	.burger 
+		> span
+			&:before
+				transform: rotate3d(0,0,1,45deg)
+				top: 0
+				transition: top .3s,transform .3s .5s
+				width: 40px
+				background: #fff
+	.burger 
+		> span
+			&:after 
+				transform: rotate3d(0,0,1,-45deg)
+				top: 0
+				transition: top .3s,transform .3s .5s
+				width: 40px
+				background: #fff
+
+	#main
+		transform: translate3d(-250px,0,0)
+
+.page-wr
+	padding-top: 64px
+
+.map-filter
+	margin-bottom: 30px
+
+.inner
+	.page-wr
+		margin-top: 50px
+		// margin-bottom: 50px
+
+#main
+	transition: transform .3s ease
+	
+@media screen and (max-width: 1500px)
+	
+	.stage
+		&-text
+			margin: 15px auto 0
+
+		&__list
+			margin: 30px 0 70px
+
+	.salutation
+		&-cont
+			padding: 66px 0 90px
+
+		&-title
+			margin-bottom: 15px
+
+		&__list
+			margin: 50px 0 -40px -40px
+
+@media screen and (max-width: 1400px)
+
+	.second-screen
+
+
+
+		&-img
+			margin-top: -100px
+
+			img
+				// max-width: 70%
+
+@media screen and (max-width: 1200px)
+
+	.first-screen
+		background-position: center 30%
+
+		&-text
+			padding: 70px 0
+
+		.col-md-4
+			max-width: 50%
+
+	.second-screen
+		padding: 50px 0
+
+		&-img
+			margin-top: -80px
+
+	.form-bot
+		padding: 55px 60px
+
+		&-cont
+			padding-bottom: 50px
+
+	.stage
+		&__list
+			&-title
+				padding: 20px 0
+
+		&-el
+			padding: 20px
+
+		&__item
+			&-top
+				padding: 15px 30px
+
+			&-img
+				max-width: 60px
+
+				img
+					max-width: 100%
+
+			&__list
+				padding: 20px 30px
+
+	.salutation
+		&-title
+			font-size: 2.3rem
+
+		&__list
+			justify-content: center
+
+		&__item
+			width: 280px
+			height: 280px
+			margin: 0 0 30px 30px
+			border: 5px solid rgba(215,224,77,.67)
+
+			> div
+				border: 20px solid var(--main-color)
+
+			&-text
+				font-size: 1rem
+				margin-top: 8px
+
+@media screen and (max-width: 1000px)
+
+	.map-filter
+		.col-4, .col-3
+			max-width: 300px
+			width: 100% !important
+			flex: none !important
+	
+	.second-screen
+		padding: 30px 0
+
+		&-img
+			margin-top: 0
+
+	.timeline
+
+		&:before
+			left: 11%
+
+		> li 
+			> .timeline
+				&-badge
+					left: 0
+					margin-left: 0
+
+				&-panel
+					width: 75%
+
+	.form-bot 
+		h2
+			font-size: 1.8rem
+			margin-bottom: 35px
+
+		form
+			.row
+				flex-direction: column
+
+			.col
+				flex-basis: auto
+
+				&:not(:first-child)
+					margin-top: 20px
+
+	.stage
+		&-title
+			font-size: 1.6rem
+
+		&__item
+			&-top
+				padding: 15px 20px
+
+			&-img
+				max-width: 40px
+				margin-right: 30px
+
+			&__list
+				padding: 20px
+
+		&-el
+			width: 100%
+
+			&__img
+				margin-right: 35px
+
+	.inner 
+		.page-wr
+			margin-top: 0
+			// margin-bottom: 30px
+
+	.page-wr
+		padding-top: 90px
+
+
+
+	.services
+		&-title
+			font-size: 1.3rem
+			margin-bottom: 30px
+
+		&__list
+			margin: 0 0 30px -30px
+
+
+		&__item
+			width: calc((100% - 30px * 2) / 2)
+			margin: 0 0 30px 30px
+
+
+			&-text
+				font-size: 1rem
+
+
+	.salutation
+
+		&-cont
+			padding: 66px 0 60px
+
+		&__list
+			margin: 30px 0 -20px -20px
+
+		&__item
+			width: 215px
+			height: 215px
+			margin: 0 0 20px 15px
+			border: 3px solid rgba(215,224,77,.67)
+
+			> div
+				border: 10px solid var(--main-color)
+
+@media screen and (max-width: 667px)
+
+	.form-signin
+		padding: 20px 0
+
+	.salutation
+
+		&-cont
+			padding: 30px 0
+			margin-top: 0
+			background-size: cover
+
+		&__list
+			flex-direction: column
+			align-items: center
+
+		&-title
+			font-size: 1.8rem
+			line-height: 1.3
+
+
+	.services
+		margin-top: 30px
+
+		&-title
+			font-size: 1rem
+			margin-bottom: 20px
+
+			br
+				display: none
+
+		&__list
+			margin: 0 0 30px -30px
+
+
+		&__item
+			width: 100%
+
+	.contacts
+		h2
+			font-size: rem(20)
+		&-map
+			margin-top: 30px
+
+
+	.inner 
+		.page-wr
+			margin-top: 0
+			// margin-bottom: 30px
+
+	.page-wr
+		padding-top: 0
+
+	.map-filter 
+		.col-3, .col-4
+			max-width: 100%
+
+		.col-3
+			margin-top: 20px
+
+	#map
+		height: 350px
+	
+	.head__burger
+		display: block
+
+
+
+	h2.text-center
+		font-size: rem(20)
+
+	.form-bot-cont
+		padding-top: 20px
+
+		.container
+			padding: 0
+
+		.form-bot
+			padding: 20px
+
+	.footer
+		.text-right
+			font-size: rem(14)
+			text-align: left !important
+
+		.col-md-5
+			margin-top: 10px
+
+	.form-bot h2
+		margin-bottom: 0
+
+
+	.stage
+		&__item
+			&-img
+				max-width: 30px
+				margin-right: 15px
+
+			&-top
+				align-items: flex-start
+
+		&-el
+			flex-direction: column
+
+			&__img
+				margin-right: 0
+				text-align: center
+				margin-bottom: 20px
+
+@media screen and (max-width: 660px)
+	
+	.main-banner
+		padding-top: 30px
+
+		>
+			img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				object-fit: cover
+				object-position: center
+
+		&__img, &__info
+			width: 100%
+
+
+		.container
+			position: relative
+			z-index: 10
+			left: auto
+			top: auto 
+			flex-direction: column-reverse
+
+		&__info 
+			h1
+				font-size: 1.4rem
+
+			p
+				line-height: 1.3
+
+	.navbar
+		position: relative !important
+		padding: 15px
+
+	.first-screen
+		padding: 0
+
+	.second-screen
+		flex-direction: column
+		padding: 30px 0 !important
+
+		&-cont
+			.container
+				padding: 0
+
+		&-img
+			margin-bottom: 20px
+
+	.timeline
+		padding: 30px 0 !important
+
+		&-panel
+			padding: 0 !important
+
+		> li
+			&:last-child
+				margin-bottom: 0
+
+			> .timeline-badge
+				top: 0 !important
+
+
+
+
+
 
 // @import "_footer.sss"
 

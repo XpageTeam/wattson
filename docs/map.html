@@ -6,6 +6,7 @@
 	<title>Карта</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;display=swap&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="css/main.css" />
 	<style type="text/css" data-ymaps="css-modules">
@@ -1878,377 +1879,315 @@
 	</style>
 </head>
 
-<body>
+<body class="inner">
 	<div id="main">
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-			<div class="container"><a class="logo" href="/"><img src="./img/logo.png" alt="" /></a>
-				<div class="collapse navbar-collapse my-2 my-md-0 mr-md-3" id="navbarsExampleDefault">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/">Что это?</a></li>
-						<li class="nav-item active"><a class="nav-link" href="http://wattson-electric.ru/map/">Карта заправок</a></li>
-						<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/contacts/">Контакты</a></li>
-						<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/accounts/login/">Вход</a></li>
-					</ul>
+		<header class="header">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolled">
+				<div class="container"><a class="logo" href="http://wattson-electric.ru/"><img src="img/logo.png" alt="" /></a>
+					<div class="collapse navbar-collapse my-2 my-md-0 mr-md-3" id="navbarsExampleDefault">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/">Что это?</a></li>
+							<li class="nav-item active"><a class="nav-link" href="http://wattson-electric.ru/map/">Карта заправок</a></li>
+							<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/contacts/">Контакты</a></li>
+							<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/accounts/login/">Вход</a></li>
+						</ul>
+					</div>
+					<div class="head__burger">
+						<div class="burger"><span></span></div>
+					</div>
 				</div>
-			</div>
-		</nav>
-		<div class="container" style="margin-bottom: 1%;">
-			<div class="row">
-				<div class="col-4 text-right">
-					<form style="display: flex;"><input class="form-control" placeholder="Введите что-то" /><button class="btn text-center" type="submit" style="background-color:#1e3c00;color:#fff;">Найти</button></form>
-				</div>
-				<div class="col-3"><select class="form-control" id="exampleFormControlSelect1">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select></div>
-			</div>
-		</div>
-		<div class="container">
-			<div id="map">
-				<ymaps class="ymaps-2-1-73-map" style="width: 1110px; height: 638px;">
-					<ymaps class="ymaps-2-1-73-map ymaps-2-1-73-i-ua_js_yes ymaps-2-1-73-map-bg ymaps-2-1-73-islets_map-lang-ru" style="width: 1110px; height: 638px;">
-						<ymaps class="ymaps-2-1-73-inner-panes">
-							<ymaps class="ymaps-2-1-73-events-pane ymaps-2-1-73-user-selection-none" unselectable="on" style="height: 100%; width: 100%; top: 0px; left: 0px; position: absolute; z-index: 3000; cursor: url(&quot;https://api-maps.yandex.ru/2.1.73/build/release/images/cursor/grab.cur&quot;) 16 16, url(&quot;https://api-maps.yandex.ru/2.1.73/build/release/images/cursor/grab.cur&quot;), move;"></ymaps>
-							<ymaps class="ymaps-2-1-73-ground-pane" style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 601;">
-								<ymaps style="z-index: 150; position: absolute;">
-									<ymaps style="position: absolute; left: 0px; top: 0px;">
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1238&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 288px; top: 244px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1237&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 224px; top: 244px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1239&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 352px; top: 244px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1239&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 352px; top: 308px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1236&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 160px; top: 244px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1237&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 224px; top: 180px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1237&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 224px; top: 308px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1239&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 352px; top: 180px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1238&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 288px; top: 180px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1238&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 288px; top: 308px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1240&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 416px; top: 244px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1236&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 160px; top: 180px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1235&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 96px; top: 180px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1236&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 160px; top: 308px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1240&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 416px; top: 180px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1240&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 416px; top: 308px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1235&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 96px; top: 244px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1235&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 96px; top: 308px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1235&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 96px; top: 116px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1236&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 160px; top: 116px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1237&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 224px; top: 116px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1239&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 352px; top: 116px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1238&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 288px; top: 116px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1240&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 416px; top: 116px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=311&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 672px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=309&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 160px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=310&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 416px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=308&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -96px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=308&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -96px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=309&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 160px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=309&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 160px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=308&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -96px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=310&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 416px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=312&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 928px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=311&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 672px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=310&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 416px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=307&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -352px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=311&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 672px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=312&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 928px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=307&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -352px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=307&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -352px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=312&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 928px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=313&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 1184px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=313&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 1184px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=307&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -352px; top: -140px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=313&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 1184px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=308&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -96px; top: -140px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=311&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 672px; top: -140px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=310&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 416px; top: -140px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=313&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 1184px; top: -140px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=312&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 928px; top: -140px;"></ymaps>
-										<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=309&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 160px; top: -140px;"></ymaps>
-									</ymaps>
-								</ymaps>
-							</ymaps>
-							<ymaps class="ymaps-2-1-73-copyrights-pane" style="height: 0px; bottom: 0px; right: 0px; top: auto; left: 0px; position: absolute; z-index: 6002;">
-								<ymaps>
-									<ymaps class="ymaps-2-1-73-copyright ymaps-2-1-73-copyright_logo_no">
-										<ymaps class="ymaps-2-1-73-copyright__fog">…</ymaps>
-										<ymaps class="ymaps-2-1-73-copyright__wrap">
-											<ymaps class="ymaps-2-1-73-copyright__layout">
-												<ymaps class="ymaps-2-1-73-copyright__content-cell">
-													<ymaps class="ymaps-2-1-73-copyright__content">
-														<ymaps class="ymaps-2-1-73-copyright__text">© Яндекс</ymaps>
-														<ymaps class="ymaps-2-1-73-copyright__agreement"><a class="ymaps-2-1-73-copyright__link" target="_blank" href="https://yandex.ru/legal/maps_termsofuse/?lang=ru">Условия использования</a></ymaps>
-													</ymaps>
-												</ymaps>
-												<ymaps class="ymaps-2-1-73-copyright__logo-cell"><a class="ymaps-2-1-73-copyright__logo" href="http://wattson-electric.ru/map/" target="_blank"></a></ymaps>
+			</nav>
+		</header>
+		<div class="page-wr">
+			<div class="map">
+				<div class="container">
+					<div class="map-filter">
+						<div class="row">
+							<div class="col-4 text-right">
+								<form style="display: flex;"><input class="form-control" placeholder="Введите что-то" /><button class="btn text-center" type="submit" style="background-color:#1e3c00;color:#fff;">Найти</button></form>
+							</div>
+							<div class="col-3"><select class="form-control" id="exampleFormControlSelect1">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select></div>
+						</div>
+					</div>
+					<div id="map">
+						<ymaps class="ymaps-2-1-73-map" style="width: 1110px; height: 638px;">
+							<ymaps class="ymaps-2-1-73-map ymaps-2-1-73-i-ua_js_yes ymaps-2-1-73-map-bg ymaps-2-1-73-islets_map-lang-ru" style="width: 1110px; height: 638px;">
+								<ymaps class="ymaps-2-1-73-inner-panes">
+									<ymaps class="ymaps-2-1-73-events-pane ymaps-2-1-73-user-selection-none" unselectable="on" style="height: 100%; width: 100%; top: 0px; left: 0px; position: absolute; z-index: 3000; cursor: url(&quot;https://api-maps.yandex.ru/2.1.73/build/release/images/cursor/grab.cur&quot;) 16 16, url(&quot;https://api-maps.yandex.ru/2.1.73/build/release/images/cursor/grab.cur&quot;), move;"></ymaps>
+									<ymaps class="ymaps-2-1-73-ground-pane" style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 601;">
+										<ymaps style="z-index: 150; position: absolute;">
+											<ymaps style="position: absolute; left: 0px; top: 0px;">
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1238&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 288px; top: 244px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1237&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 224px; top: 244px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1239&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 352px; top: 244px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1239&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 352px; top: 308px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1236&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 160px; top: 244px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1237&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 224px; top: 180px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1237&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 224px; top: 308px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1239&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 352px; top: 180px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1238&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 288px; top: 180px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1238&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 288px; top: 308px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1240&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 416px; top: 244px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1236&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 160px; top: 180px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1235&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 96px; top: 180px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1236&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 160px; top: 308px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1240&amp;y=641&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 416px; top: 180px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1240&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 416px; top: 308px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1235&amp;y=642&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 96px; top: 244px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1235&amp;y=643&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 96px; top: 308px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1235&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 96px; top: 116px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1236&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 160px; top: 116px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1237&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 224px; top: 116px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1239&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 352px; top: 116px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1238&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 288px; top: 116px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=1240&amp;y=640&amp;z=11&amp;scale=1&amp;lang=ru_RU&quot;); width: 64px; height: 64px; left: 416px; top: 116px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=311&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 672px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=309&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 160px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=310&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 416px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=308&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -96px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=308&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -96px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=309&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 160px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=309&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 160px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=308&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -96px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=310&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 416px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=312&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 928px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=311&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 672px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=310&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 416px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=307&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -352px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=311&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 672px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=312&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 928px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=307&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -352px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=307&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -352px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec01.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=312&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 928px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=313&amp;y=160&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 1184px; top: 116px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=313&amp;y=161&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 1184px; top: 372px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=307&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -352px; top: -140px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec03.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=313&amp;y=162&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 1184px; top: 628px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=308&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: -96px; top: -140px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=311&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 672px; top: -140px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=310&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 416px; top: -140px; transition-duration: 250ms; transition-property: opacity;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=313&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 1184px; top: -140px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec02.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=312&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 928px; top: -140px;"></ymaps>
+												<ymaps class="ymaps-2-1-73-user-selection-none" unselectable="on" style="opacity: 1; position: absolute; background-repeat: no-repeat; background-size: 100% 100%; background-image: url(&quot;https://vec04.maps.yandex.net/tiles?l=map&amp;v=19.06.02-0&amp;x=309&amp;y=159&amp;z=9&amp;scale=1&amp;lang=ru_RU&quot;); width: 256px; height: 256px; left: 160px; top: -140px;"></ymaps>
 											</ymaps>
 										</ymaps>
 									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-map-copyrights-promo"><iframe src="./img/saved_resource.html" width="0" height="0" scrolling="no" frameborder="0" style="overflow: hidden; width: 185px !important; max-width: 185px !important; min-width: 185px !important; height: 34px !important; max-height: 34px !important; min-height: 34px !important;"></iframe></ymaps>
-							</ymaps>
-							<ymaps class="ymaps-2-1-73-controls-pane" style="width: 100%; top: 0px; left: 0px; position: absolute; z-index: 5403;">
-								<ymaps class="ymaps-2-1-73-controls__toolbar" style="margin-top: 10px;">
-									<ymaps class="ymaps-2-1-73-controls__toolbar_left">
-										<ymaps class="ymaps-2-1-73-controls__control_toolbar" style="margin-right: 0px; margin-left: 10px; position: inherit;">
-											<ymaps>
-												<ymaps class="ymaps-2-1-73-route-panel-button">
-													<ymaps class="ymaps-2-1-73-route-panel-button__button">
-														<ymaps class="ymaps-2-1-73-user-selection-none" id="id_155950229092859863577" unselectable="on">
-															<ymaps>
-																<ymaps class="ymaps-2-1-73-float-button" style="max-width: px" title="Маршруты">
-																	<ymaps class="ymaps-2-1-73-float-button-icon ymaps-2-1-73-float-button-icon_icon_routes"></ymaps>
-																	<ymaps class="ymaps-2-1-73-float-button-text">Маршруты</ymaps>
+									<ymaps class="ymaps-2-1-73-copyrights-pane" style="height: 0px; bottom: 0px; right: 0px; top: auto; left: 0px; position: absolute; z-index: 6002;">
+										<ymaps>
+											<ymaps class="ymaps-2-1-73-copyright ymaps-2-1-73-copyright_logo_no">
+												<ymaps class="ymaps-2-1-73-copyright__fog">…</ymaps>
+												<ymaps class="ymaps-2-1-73-copyright__wrap">
+													<ymaps class="ymaps-2-1-73-copyright__layout">
+														<ymaps class="ymaps-2-1-73-copyright__content-cell">
+															<ymaps class="ymaps-2-1-73-copyright__content">
+																<ymaps class="ymaps-2-1-73-copyright__text">© Яндекс</ymaps>
+																<ymaps class="ymaps-2-1-73-copyright__agreement"><a class="ymaps-2-1-73-copyright__link" target="_blank" href="https://yandex.ru/legal/maps_termsofuse/?lang=ru">Условия использования</a></ymaps>
+															</ymaps>
+														</ymaps>
+														<ymaps class="ymaps-2-1-73-copyright__logo-cell"><a class="ymaps-2-1-73-copyright__logo" href="http://wattson-electric.ru/map/" target="_blank"></a></ymaps>
+													</ymaps>
+												</ymaps>
+											</ymaps>
+										</ymaps>
+										<ymaps class="ymaps-2-1-73-map-copyrights-promo"><iframe src="./img/saved_resource.html" width="0" height="0" scrolling="no" frameborder="0" style="overflow: hidden; width: 185px !important; max-width: 185px !important; min-width: 185px !important; height: 34px !important; max-height: 34px !important; min-height: 34px !important;"></iframe></ymaps>
+									</ymaps>
+									<ymaps class="ymaps-2-1-73-controls-pane" style="width: 100%; top: 0px; left: 0px; position: absolute; z-index: 5403;">
+										<ymaps class="ymaps-2-1-73-controls__toolbar" style="margin-top: 10px;">
+											<ymaps class="ymaps-2-1-73-controls__toolbar_left">
+												<ymaps class="ymaps-2-1-73-controls__control_toolbar" style="margin-right: 0px; margin-left: 10px; position: inherit;">
+													<ymaps>
+														<ymaps class="ymaps-2-1-73-route-panel-button">
+															<ymaps class="ymaps-2-1-73-route-panel-button__button">
+																<ymaps class="ymaps-2-1-73-user-selection-none" id="id_155950229092859863577" unselectable="on">
+																	<ymaps>
+																		<ymaps class="ymaps-2-1-73-float-button" style="max-width: px" title="Маршруты">
+																			<ymaps class="ymaps-2-1-73-float-button-icon ymaps-2-1-73-float-button-icon_icon_routes"></ymaps>
+																			<ymaps class="ymaps-2-1-73-float-button-text">Маршруты</ymaps>
+																		</ymaps>
+																	</ymaps>
+																</ymaps>
+															</ymaps>
+															<ymaps class="ymaps-2-1-73-route-panel-button__popup">
+																<ymaps class="ymaps-2-1-73-control-popup-parent" id="id_155950229092859863578">
+																	<ymaps></ymaps>
 																</ymaps>
 															</ymaps>
 														</ymaps>
 													</ymaps>
-													<ymaps class="ymaps-2-1-73-route-panel-button__popup">
-														<ymaps class="ymaps-2-1-73-control-popup-parent" id="id_155950229092859863578">
-															<ymaps></ymaps>
-														</ymaps>
+												</ymaps>
+											</ymaps>
+											<ymaps class="ymaps-2-1-73-controls__toolbar_right"></ymaps>
+										</ymaps>
+										<ymaps class="ymaps-2-1-73-controls__bottom" style="top: 638px;"></ymaps>
+									</ymaps>
+									<ymaps class="ymaps-2-1-73-routepanel-pane" style="width: 100%; top: 0px; left: 0px; position: absolute; z-index: 8404;">
+										<ymaps class="ymaps-2-1-73-control-popup ymaps-2-1-73-popup ymaps-2-1-73-popup_direction_down ymaps-2-1-73-popup_to_bottom ymaps-2-1-73-popup_theme_ffffff ymaps-2-1-73-control-popup_content-loading ymaps-2-1-73-control-popup_fullscreen" style="transform-origin: 17px 0px;">
+											<ymaps class="ymaps-2-1-73-control-popup__tail" style="left: 5px;">
+												<ymaps class="ymaps-2-1-73-control-popup__tail-front"></ymaps>
+											</ymaps>
+											<ymaps class="ymaps-2-1-73-control-popup__content">
+												<ymaps class="ymaps-2-1-73-control-popup__header">
+													<ymaps class="ymaps-2-1-73-control-popup__hide">
+														<ymaps class="ymaps-2-1-73-control-popup__hide-icon"></ymaps>
+													</ymaps>
+													<ymaps class="ymaps-2-1-73-control-popup__icon ymaps-2-1-73-route-panel-button__panel-icon"></ymaps>
+													<ymaps class="ymaps-2-1-73-control-popup__title">Маршруты</ymaps>
+												</ymaps>
+												<ymaps class="ymaps-2-1-73-control-popup__layout" style="max-height: 745.188px;">
+													<ymaps class="ymaps-2-1-73-control-popup__spinner">
+														<ymaps class="ymaps-2-1-73-control-popup__spinner__circle"></ymaps>
 													</ymaps>
 												</ymaps>
 											</ymaps>
 										</ymaps>
 									</ymaps>
-									<ymaps class="ymaps-2-1-73-controls__toolbar_right"></ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-controls__bottom" style="top: 638px;"></ymaps>
-							</ymaps>
-							<ymaps class="ymaps-2-1-73-routepanel-pane" style="width: 100%; top: 0px; left: 0px; position: absolute; z-index: 8404;">
-								<ymaps class="ymaps-2-1-73-control-popup ymaps-2-1-73-popup ymaps-2-1-73-popup_direction_down ymaps-2-1-73-popup_to_bottom ymaps-2-1-73-popup_theme_ffffff ymaps-2-1-73-control-popup_content-loading ymaps-2-1-73-control-popup_fullscreen" style="transform-origin: 17px 0px;">
-									<ymaps class="ymaps-2-1-73-control-popup__tail" style="left: 5px;">
-										<ymaps class="ymaps-2-1-73-control-popup__tail-front"></ymaps>
-									</ymaps>
-									<ymaps class="ymaps-2-1-73-control-popup__content">
-										<ymaps class="ymaps-2-1-73-control-popup__header">
-											<ymaps class="ymaps-2-1-73-control-popup__hide">
-												<ymaps class="ymaps-2-1-73-control-popup__hide-icon"></ymaps>
-											</ymaps>
-											<ymaps class="ymaps-2-1-73-control-popup__icon ymaps-2-1-73-route-panel-button__panel-icon"></ymaps>
-											<ymaps class="ymaps-2-1-73-control-popup__title">Маршруты</ymaps>
-										</ymaps>
-										<ymaps class="ymaps-2-1-73-control-popup__layout" style="max-height: 745.188px;">
-											<ymaps class="ymaps-2-1-73-control-popup__spinner">
-												<ymaps class="ymaps-2-1-73-control-popup__spinner__circle"></ymaps>
+									<ymaps class="ymaps-2-1-73-places-pane" style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 2405;">
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 268px; top: 241px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863620">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___1BAD03__1BAD03_34x41_1559502291952" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
 										</ymaps>
-									</ymaps>
-								</ymaps>
-							</ymaps>
-							<ymaps class="ymaps-2-1-73-places-pane" style="top: 0px; left: 0px; position: absolute; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 2405;">
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 268px; top: 241px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863620">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___1BAD03__1BAD03_34x41_1559502291952" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 281px; top: 251px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863627">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
 										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 281px; top: 251px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863627">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
-											</ymaps>
-										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 282px; top: 249px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863630">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 282px; top: 249px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863630">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
 										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 282px; top: 251px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863633">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
-											</ymaps>
-										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 282px; top: 241px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863636">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 282px; top: 251px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863633">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
 										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 283px; top: 253px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863639">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
-											</ymaps>
-										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 286px; top: 233px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863642">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___1BAD03__1BAD03_34x41_1559502291952" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 282px; top: 241px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863636">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
 										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 289px; top: 258px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863645">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
-											</ymaps>
-										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 294px; top: 245px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863648">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 283px; top: 253px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863639">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
 										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 295px; top: 259px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
-											</ymaps>
-											<ymaps id="id_155950229092859863651">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 286px; top: 233px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863642">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___1BAD03__1BAD03_34x41_1559502291952" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
 										</ymaps>
-									</ymaps>
-								</ymaps>
-								<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 296px; top: 244px;">
-									<ymaps>
-										<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
-											<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
-												<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 289px; top: 258px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863645">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
-											<ymaps id="id_155950229092859863654">
-												<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+										</ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 294px; top: 245px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863648">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
+											</ymaps>
+										</ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 295px; top: 259px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863651">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
+											</ymaps>
+										</ymaps>
+										<ymaps class="ymaps-2-1-73-placemark-overlay ymaps-2-1-73-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 296px; top: 244px;">
+											<ymaps>
+												<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption">
+													<ymaps class="ymaps-2-1-73-islets_dot-icon-with-caption__caption-block">
+														<ymaps class="ymaps-2-1-73-islets_icon-caption" style="padding: 0px; max-width: 0px;"></ymaps>
+													</ymaps>
+													<ymaps id="id_155950229092859863654">
+														<ymaps class="ymaps-2-1-73-svg-icon ymaps_https___api_maps_yandex_ru_2_1_73_1148120019026islands_dotIcon___B3B3B3__B3B3B3_34x41_1559502291958" style="position: absolute; width: 34px; height: 41px; left: -11px; top: -38px;"></ymaps>
+													</ymaps>
+												</ymaps>
 											</ymaps>
 										</ymaps>
 									</ymaps>
 								</ymaps>
 							</ymaps>
 						</ymaps>
-					</ymaps>
-				</ymaps>
+					</div>
+				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			ymaps.ready(init);
-			var myMap;
-			var geolocation;
-
-			function init() {
-				geolocation = ymaps.geolocation;
-				myMap = new ymaps.Map("map", {
-					center: [55.76, 37.64],
-					zoom: 11,
-					controls: ['routeButtonControl']
-				}, {
-					searchControlProvider: 'yandex#search'
-				});
-				var objectManager = new ymaps.ObjectManager({
-					clusterize: false,
-					gridSize: 32,
-					clusterDisableClickZoom: true
-				});
-				myMap.geoObjects.add(objectManager);
-				/*geolocation.get({
-				provider: 'yandex',
-				mapStateAutoApply: true
-				}).then(function (result) {
-				// We'll mark the position calculated by IP in red.
-				result.geoObjects.options.set('preset', 'islands#redCircleIcon');
-				result.geoObjects.get(0).properties.set({
-				balloonContentBody: 'My location'
-				});
-				myMap.geoObjects.add(result.geoObjects);
-				});
-				geolocation.get({
-				provider: 'browser',
-				mapStateAutoApply: true
-				}).then(function (result) {
-				result.geoObjects.options.set('preset', 'islands#blueCircleIcon');
-				myMap.geoObjects.add(result.geoObjects);
-				});*/
-				$.ajax({
-					url: "/static/js/data.json"
-				}).done(function(data) {
-					objectManager.add(data);
-				});
-			}
-
-			function getroute(par1, par2) {
-				var control = myMap.controls.get('routeButtonControl');
-				control.routePanel.geolocate('from');
-				control.routePanel.state.set({
-					fromEnabled: true,
-					to: [par1, par2],
-					type: "auto"
-				});
-				control.state.set('expanded', true);
-			};
-
-			function oldGetroute(par1, par2) {
-				var multiRoute = new ymaps.multiRouter.MultiRoute({
-					referencePoints: [
-						myMap.geoObjects.get(1).position,
-						[par1, par2],
-					],
-					params: {
-						results: 2
-					}
-				}, {
-					boundsAutoApply: true
-				});
-				myMap.geoObjects.add(multiRoute);
-			};
-		</script>
 	</div>
 	<footer class="footer" style="padding: 10px 0px;background: #467716!important;color:#fff;">
 		<div class="container">

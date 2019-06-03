@@ -6,109 +6,118 @@
 	<title>Главная</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;display=swap&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet" />
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="css/main.css" />
 </head>
 
-<body>
+<body class="main">
+	<div class="mobile-menu"></div>
 	<div id="main">
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolled">
-			<div class="container"><a class="logo" href="http://wattson-electric.ru/"><img src="img/logo.png" alt="" /></a>
-				<div class="collapse navbar-collapse my-2 my-md-0 mr-md-3" id="navbarsExampleDefault">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/">Что это?</a></li>
-						<li class="nav-item active"><a class="nav-link" href="http://wattson-electric.ru/map/">Карта заправок</a></li>
-						<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/contacts/">Контакты</a></li>
-						<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/accounts/login/">Вход</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<div class="container-fluid first-screen">
-			<div class="container">
-				<div class="position-relative overflow-hidden text-left">
-					<div class="col-md-4 p-lg-5 first-screen-text">
-						<h1 class="display-4 font-weight-normal">Сервис для электромобилей</h1>
-						<p class="lead font-weight-normal">Вы гоняете на электрокаре, но найти свободную заправку для вас адовый геморрой?
-							Тогда наш сервис предназначен для вас! <br /> Скачивайте наше приложение во всех app-сторах страны.</p><a class="btn btn-outline-secondary btn-success" href="http://wattson-electric.ru/#"><img class="img-responsive" src="img/apple.png" />App Store</a><a class="btn btn-success btn-outline-secondary" href="http://wattson-electric.ru/#"><img class="img-responsive" src="img/android-logo.png" />Google Play</a>
+		<header class="header">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolled">
+				<div class="container"><a class="logo" href="http://wattson-electric.ru/"><img src="img/logo.png" alt="" /></a>
+					<div class="collapse navbar-collapse my-2 my-md-0 mr-md-3" id="navbarsExampleDefault">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/">Что это?</a></li>
+							<li class="nav-item active"><a class="nav-link" href="http://wattson-electric.ru/map/">Карта заправок</a></li>
+							<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/contacts/">Контакты</a></li>
+							<li class="nav-item"><a class="nav-link" href="http://wattson-electric.ru/accounts/login/">Вход</a></li>
+						</ul>
 					</div>
-					<div class="product-device box-shadow d-none d-md-block"></div>
-					<div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+					<div class="head__burger">
+						<div class="burger"><span></span></div>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="container-fluid" style="background-color: #f2f1f1;">
-			<div class="container">
-				<div class="row second-screen" style="position:relative">
-					<div class="col-md-5"><img src="./img/wtson-big2.png" style="max-width:-webkit-fill-available; max-width: 100%;position: absolute;top: -110px;" /></div>
-					<div class="col-md-6 text-center">
-						<p>Скачав приложение, вы получаете доступ к более 100 зарядным станциям, расположенным по всей Москве.</p>
-						<h4>Что нужно сделать:</h4>
-						<div class="row">
-							<div class="col-md-4 align-items-center mx-auto"><img src="img/icon-1.png" />
-								<h6>Найдите и забронируйте ближайшую заправку</h6>
-							</div>
-							<div class="col-md-4 align-items-center mx-auto"><img src="img/icon-2.png" />
-								<h6>Оплатите зарядку и зарядите ваш автомобиль</h6>
-							</div>
-							<div class="col-md-4 align-items-center mx-auto"><img src="img/icon-3.png" />
-								<h6>Выпейте вкусного кофе</h6>
+			</nav>
+		</header>
+		<div class="page-wr">
+			<div class="first-screen">
+				<div class="main-banner"><img src="img/main-bg.jpg" alt="" />
+					<div class="container">
+						<div class="main-banner__info">
+							<div>
+								<h1>Сервис для электромобилей</h1>
+								<p class="lead font-weight-normal">Вы гоняете на электрокаре, но найти свободную заправку для вас адовый геморрой? Тогда наш сервис предназначен для вас!<br> Скачивайте наше приложение во всех app-сторах страны.</p>
 							</div>
 						</div>
+						<div class="main-banner__img"><img src="img/main-phone.png" alt="" /></div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<ul class="timeline">
-				<li class="timeline-inverted">
-					<div class="timeline-badge"><img src="img/icon-1.png" style="width: 100%;max-width: 9rem;padding: 1.5rem;" /></div>
-					<div class="timeline-panel">
-						<div class="timeline-heading">
-							<h4 class="timeline-title">ДЛЯ ВЛАДЕЛЬЦЕВ ЭЛЕКТРОКАРОВ</h4>
-						</div>
-						<div class="timeline-body">
-							<p>Мы думаем, что все владельцы электрокаров сталкивались с проблемой поиска свобоных зарядных станций.
-								Вспомните, как вы икали место, чтобы подзарядиться и метались от отной зарядки к другой... Теперь это в прошлом!
-								Наш сервис позволит вам выбрать ближайшую зарядную станцию, забронировать ее, комфортно зарядить автомобиль и оплатить зарядку.
-								Все что для этого нужно - ваш смартфон!</p>
-						</div>
-					</div>
-				</li>
-				<li class="timeline-inverted">
-					<div class="timeline-badge warning"><img src="img/icon-3.png" style="width: 100%;max-width: 9rem;padding: 1.5rem;" /></div>
-					<div class="timeline-panel">
-						<div class="timeline-heading">
-							<h4 class="timeline-title">ДЛЯ БИЗНЕСА</h4>
-						</div>
-						<div class="timeline-body">
-							<p>Вы хотите привлечь новых клиентов, но все основные способы уже испробованы? Мы знаем, как это сделать!
-								Установите одну из наших зарядных станций на территории вашего отеля, офиса, кафе или другого бизнеса и получите новую
-								платежеспособную аудиторию! Все что вам нужно - это связаться с нам, а всю работу по установке, подключению и обслуживанию
-								зарядки мы возьмем на себя.</p>
+			<div class="container-fluid second-screen-cont">
+				<div class="container">
+					<div class="row second-screen">
+						<div class="col-md-5 second-screen-img"><img src="./img/wtson-big2.png" /></div>
+						<div class="col-md-6 text-center">
+							<p>Скачав приложение, вы получаете доступ к более 100 зарядным станциям, расположенным по всей Москве.</p>
+							<h4>Что нужно сделать:</h4>
+							<div class="row">
+								<div class="col-md-4 align-items-center mx-auto"><img src="img/icon-1.png" />
+									<h6>Найдите и забронируйте ближайшую заправку</h6>
+								</div>
+								<div class="col-md-4 align-items-center mx-auto"><img src="img/icon-2.png" />
+									<h6>Оплатите зарядку и зарядите ваш автомобиль</h6>
+								</div>
+								<div class="col-md-4 align-items-center mx-auto"><img src="img/icon-3.png" />
+									<h6>Выпейте вкусного кофе</h6>
+								</div>
+							</div>
 						</div>
 					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="container-fluid text-center" style="background-color: #61b40e; color:#fff;padding:0;padding-top: 8%;">
-			<h2 class="text-center">КАК ЭТО РАБОТАЕТ</h2>
-			<div class="container-fluid" style="background-image: url(/static/images/%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%B8-1-%D1%84%D0%BE%D0%BD.png);padding:0;margin:0;background-position-y: 74%;overflow:hidden;">
-				<div class="container"><img src="./img/станции-1.png" width="100%" /></div>
+				</div>
 			</div>
-		</div>
-		<div class="container-fluid text-center form-bot-cont">
 			<div class="container">
-				<div class="form-bot">
-					<h2 class="text-center">Cвяжитесь с нами</h2>
-					<form action="http://wattson-electric.ru/form-send/" method="post">
-						<div class="row"><input type="hidden" name="csrfmiddlewaretoken" value="uU3h9PLmdQOdLTTk90OQ4zsgfdIHNKhm0EkRYNE6wqEbESOVhfsESqxbAeNUoXds" />
-							<div class="col"><input class="form-control" id="id_name" type="text" name="name" placeholder="Имя" required="" /></div>
-							<div class="col"><input class="form-control" id="id_email" type="email" name="email" placeholder="Email" required="" /></div>
-							<div class="col"><input class="form-control" id="id_message" type="text" name="message" placeholder="Текст сообщения" required="" /></div>
-							<div class="col"><button class="btn" type="submit" style="background-color:#1e3c00;color:#fff;">Отправить</button></div>
+				<ul class="timeline">
+					<li class="timeline-inverted">
+						<div class="timeline-badge"><img src="img/icon-1.png" style="width: 100%;max-width: 9rem;padding: 1.5rem;" /></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">ДЛЯ ВЛАДЕЛЬЦЕВ ЭЛЕКТРОКАРОВ</h4>
+							</div>
+							<div class="timeline-body">
+								<p>Мы думаем, что все владельцы электрокаров сталкивались с проблемой поиска свобоных зарядных станций.
+									Вспомните, как вы икали место, чтобы подзарядиться и метались от отной зарядки к другой... Теперь это в прошлом!
+									Наш сервис позволит вам выбрать ближайшую зарядную станцию, забронировать ее, комфортно зарядить автомобиль и оплатить зарядку.
+									Все что для этого нужно - ваш смартфон!</p>
+							</div>
 						</div>
-					</form>
+					</li>
+					<li class="timeline-inverted">
+						<div class="timeline-badge warning"><img src="img/icon-3.png" style="width: 100%;max-width: 9rem;padding: 1.5rem;" /></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">ДЛЯ БИЗНЕСА</h4>
+							</div>
+							<div class="timeline-body">
+								<p>Вы хотите привлечь новых клиентов, но все основные способы уже испробованы? Мы знаем, как это сделать!
+									Установите одну из наших зарядных станций на территории вашего отеля, офиса, кафе или другого бизнеса и получите новую
+									платежеспособную аудиторию! Все что вам нужно - это связаться с нам, а всю работу по установке, подключению и обслуживанию
+									зарядки мы возьмем на себя.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="container-fluid text-center" style="background-color: #61b40e; color:#fff;padding:0;padding-top: 8%;">
+				<h2 class="text-center">КАК ЭТО РАБОТАЕТ</h2>
+				<div class="container-fluid" style="background-image: url(/static/images/%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%B8-1-%D1%84%D0%BE%D0%BD.png);padding:0;margin:0;background-position-y: 74%;overflow:hidden;">
+					<div class="container"><img src="img/станции-1.png" width="100%" /></div>
+				</div>
+			</div>
+			<div class="container-fluid text-center form-bot-cont">
+				<div class="container">
+					<div class="form-bot">
+						<h2 class="text-center">Cвяжитесь с нами</h2>
+						<form action="http://wattson-electric.ru/form-send/" method="post">
+							<div class="row"><input type="hidden" name="csrfmiddlewaretoken" value="uU3h9PLmdQOdLTTk90OQ4zsgfdIHNKhm0EkRYNE6wqEbESOVhfsESqxbAeNUoXds" />
+								<div class="col"><input class="form-control" id="id_name" type="text" name="name" placeholder="Имя" required="" /></div>
+								<div class="col"><input class="form-control" id="id_email" type="email" name="email" placeholder="Email" required="" /></div>
+								<div class="col"><input class="form-control" id="id_message" type="text" name="message" placeholder="Текст сообщения" required="" /></div>
+								<div class="col"><button class="btn" type="submit" style="background-color:#1e3c00;color:#fff;">Отправить</button></div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -121,14 +130,7 @@
 			</div>
 		</div>
 	</footer>
-	<script>
-		$(function() {
-			$(document).scroll(function() {
-				var $nav = $(".fixed-top");
-				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-			});
-		});
-	</script>
+	<script src="js/common.js"></script>
 </body>
 
 </html>

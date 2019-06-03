@@ -12,8 +12,6 @@ import $ from "jquery"
 window.$ = $;
 window.jQuery = $;
 
-require("./bootstrap.min.js");
-require("./bootstrap.bundle.min.js");
 // require("./countTo.js");
 // require("./countTo.js");
 // require("./jquery.fancybox.js")
@@ -28,6 +26,21 @@ require("./bootstrap.bundle.min.js");
 
 
 document.addEventListener("DOMContentLoaded", e => {
+
+	$(document).scroll(function() {
+		var $nav = $(".fixed-top");
+		$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+
+	$('.burger').click(function(){
+		$('body').toggleClass('js__menu--open')
+	})
+
+
+	var mobileMenu = $('.navbar-nav').clone();
+
+	$('.mobile-menu').append(mobileMenu);
+
 
 
 })
