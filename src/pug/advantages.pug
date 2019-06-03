@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Шаги
+		include inc/head.pug
+		include inc/css.pug
+	body.inner
+		#main
+			nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top.scrolled
+				.container
+					a.logo(href="http://wattson-electric.ru/")
+						img(src="img/logo.png" alt="")
+					#navbarsExampleDefault.collapse.navbar-collapse.my-2.my-md-0.mr-md-3
+						include inc/nav.pug
+							
+			.container
+				.services
+					.services-title Если у вас установлены ЭЗС, мы можем<br> взять сервисное обслуживание <b>на себя:</b>
+
+					.services__list
+						.services__item
+							figure
+								img(src="img/services-1.png", alt="")
+							.services__item-text Возможность видеть данные о работе ЭЗС в режиме реального времени на экране компьютера
+						.services__item
+							figure
+								img(src="img/services-2.png", alt="")
+							.services__item-text Контроль работы станций и поддержка 24/7
+						.services__item
+							figure
+								img(src="img/services-3.png", alt="")
+							.services__item-text Оперативный выезд квалифицированных специалистов и, в случае неисправности, возможность произвести ремонт и обслуживание на месте
+						.services__item
+							figure
+								img(src="img/services-4.png", alt="")
+							.services__item-text Гарантия от производителя на установленную ЭЗС
+						.services__item
+							figure
+								img(src="img/services-5.png", alt="")
+							.services__item-text Возможность выбрать один из пакетов сервисного контракта или рассчитать индивидуально
+
+
+			.container-fluid.text-center(style="background-color: #61b40e; color:#fff;padding:0;padding-top: 8%;")
+				h2.text-center КАК ЭТО РАБОТАЕТ
+				.container-fluid(style="background-image: url(/static/images/%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D0%B8-1-%D1%84%D0%BE%D0%BD.png);padding:0;margin:0;background-position-y: 74%;overflow:hidden;")
+					.container
+						img(src="img/станции-1.png" width="100%")
+			.container-fluid.text-center.form-bot-cont
+				.container
+					.form-bot
+						h2.text-center Cвяжитесь с нами
+						form(action="http://wattson-electric.ru/form-send/" method="post")
+							.row
+								input(type="hidden" name="csrfmiddlewaretoken" value="uU3h9PLmdQOdLTTk90OQ4zsgfdIHNKhm0EkRYNE6wqEbESOVhfsESqxbAeNUoXds")
+								.col
+									input#id_name.form-control(type="text" name="name" placeholder="Имя" required="")
+								.col
+									input#id_email.form-control(type="email" name="email" placeholder="Email" required="")
+								.col
+									input#id_message.form-control(type="text" name="message" placeholder="Текст сообщения" required="")
+								.col
+									button.btn(type="submit" style="background-color:#1e3c00;color:#fff;") Отправить
+
+		footer.footer(style="padding: 10px 0px;background: #467716!important;color:#fff;")
+			.container
+				.row
+					.col-md-7
+						img(src="img/asdasd.png" style="max-width:120px;")
+					.col-md-5.text-right
+						span.text-muted.text-right ООО "WATTSON" | ОГРН: 887643574839 | © 2018 
+
+		script.
+			$(function () {
+			$(document).scroll(function () {
+			var $nav = $(".fixed-top");
+			$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+			});
+			});
+
