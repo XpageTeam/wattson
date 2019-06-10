@@ -20,6 +20,51 @@ li
 	list-style: none
 	padding: 0
 	margin: 0
+.electric-car
+	position: relative
+	margin-top: -50px
+
+
+
+.iframe-wrapper
+	position: relative
+	padding-top: 55%
+
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		height: 100% !important
+		width: 100% !important
+
+.news__item
+	display: flex
+	text-decoration: none
+	color: #000
+	padding: 30px 0
+
+	&:not(:first-child)
+		border-top: 1px solid #eee
+
+	&:hover
+		text-decoration: none
+		color: #000
+
+		.news__item
+			&-title
+				color: #61b40e
+
+
+	&-img
+		margin-right: 30px
+		flex: none
+
+	&-title
+		font-size: rem(18)
+		margin-bottom: 20px
+		font-weight: bold
+
+
 
 .map
 	.col-8
@@ -38,6 +83,10 @@ li
 
 			input, select
 				max-width: 320px
+
+
+#bx-panel
+	z-index: 99995!important
 
 .mobile-menu
 	position: absolute
@@ -180,7 +229,7 @@ li
 
 	&__list
 		display: flex
-		margin: 70px 0 -40px -40px
+		margin: 70px 0 0 -40px
 
 	&__item
 		position: relative
@@ -297,6 +346,9 @@ h2.text-center
 .main-banner
 	position: relative
 
+	> img
+		width: 100%
+
 
 	.container
 		display: flex
@@ -312,6 +364,7 @@ h2.text-center
 
 	&__img
 		text-align: center
+
 
 	&__info
 		h1
@@ -433,13 +486,13 @@ h2.text-center
 
 	.salutation
 		&-cont
-			padding: 66px 0 90px
+			padding-bottom: 90px
 
 		&-title
 			margin-bottom: 15px
 
 		&__list
-			margin: 50px 0 -40px -40px
+			margin: 50px 0 0 -40px
 
 @media screen and (max-width: 1400px)
 
@@ -454,6 +507,12 @@ h2.text-center
 				// max-width: 70%
 
 @media screen and (max-width: 1200px)
+
+	.logo
+		max-width: 145px
+
+		img
+			max-width: 100%
 
 	.first-screen
 		background-position: center 30%
@@ -518,6 +577,20 @@ h2.text-center
 				margin-top: 8px
 
 @media screen and (max-width: 1000px)
+
+	.navbar .nav-link
+		padding: 18px 5px!important
+		font-size: 13px
+
+	.salutation
+		&-cont
+			padding: 65px 0 40px !important
+
+		&__list
+			margin-bottom: 30px !important
+
+	.navbar-collapse
+		margin-right: 0 !important
 
 	.map
 		.col-8
@@ -626,7 +699,7 @@ h2.text-center
 	.salutation
 
 		&-cont
-			padding: 66px 0 60px
+			padding-bottom: 60px
 
 		&__list
 			margin: 30px 0 -20px -20px
@@ -642,6 +715,22 @@ h2.text-center
 
 @media screen and (max-width: 667px)
 
+	.detail-news
+		.news-title
+			font-size: rem(18)
+			margin-bottom: 20px
+
+
+	.news__item
+		flex-direction: column
+
+		&-img
+			margin: 0 0 20px 0
+
+			img
+				width: 100%
+
+
 	.inner
 		.page-wr
 			padding: 20px 0 0 0	
@@ -656,7 +745,7 @@ h2.text-center
 	.salutation
 
 		&-cont
-			padding: 30px 0
+			padding: 30px 0 40px !important
 			margin-top: 0
 			background-size: cover
 

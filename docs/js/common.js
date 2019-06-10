@@ -9521,6 +9521,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	var mobileMenu = (0, _jquery2.default)('.navbar-nav').clone();
 
 	(0, _jquery2.default)('.mobile-menu').append(mobileMenu);
+
+	(0, _jquery2.default)('.text-page iframe').wrap('<div class="iframe-wrapper"></div>');
 });
 
 /***/ }),

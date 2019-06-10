@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", e => {
 
 	$('.mobile-menu').append(mobileMenu);
 
+	$('.text-page iframe').wrap('<div class="iframe-wrapper"></div>')
+
 
 
 })
