@@ -9523,6 +9523,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	(0, _jquery2.default)('.mobile-menu').append(mobileMenu);
 
 	(0, _jquery2.default)('.text-page iframe').wrap('<div class="iframe-wrapper"></div>');
+
+	(0, _jquery2.default)("body").on("click", ".stage-el__info .btn", function () {
+		(0, _jquery2.default)("html, body").animate({
+			scrollTop: (0, _jquery2.default)(".form-bot").offset().top
+		});
+	});
 });
 
 /***/ }),

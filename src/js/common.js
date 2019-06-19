@@ -41,7 +41,14 @@ document.addEventListener("DOMContentLoaded", e => {
 
 	$('.mobile-menu').append(mobileMenu);
 
-	$('.text-page iframe').wrap('<div class="iframe-wrapper"></div>')
+	$('.text-page iframe').wrap('<div class="iframe-wrapper"></div>');
+
+
+	$("body").on("click", ".stage-el__info .btn", function(){
+		$("html, body").animate({
+			scrollTop: $(".form-bot").offset().top
+		})
+	});
 
 
 
